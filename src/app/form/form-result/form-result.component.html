@@ -1,0 +1,37 @@
+<div class="row flex-card mt-3" *ngIf="isShown">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h2>Payroll:</h2>
+        <hr />
+        <h3 class="card-title">
+          Basic Salary: <span> {{ personBasicSalary }} Rials </span>
+        </h3>
+        <hr />
+        <h3 class="card-title">
+          Bonous Salary:<span> {{ personBonusSalary }} Rials </span>
+        </h3>
+        <hr />
+        <h3 class="card-title">
+          Gross Salary: <span> {{ personGrossSalary }} Rials </span>
+        </h3>
+        <hr />
+        <h3 class="card-title">
+          Basic Tax: <span> {{ personBasicTax }} Rials </span>
+        </h3>
+        <hr />
+        <h3 class="card-title">
+          High Income Tax: <span> {{ personHighTax }} Rials </span>
+        </h3>
+        <hr />
+        <h3 class="card-title">
+          Total Tax: <span> {{ personAllTax }} Rials </span>
+        </h3>
+        <hr />
+        <h3 class="card-title">
+          Net Sallary: <span> {{ personNetSalary }} Rials </span>
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>

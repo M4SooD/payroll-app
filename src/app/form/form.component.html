@@ -1,0 +1,70 @@
+<div class="container">
+  <form>
+    <div class="row">
+      <label class="col-25" for="experience">Years of Experience</label>
+      <input
+        type="number"
+        class="col-75"
+        id="experience"
+        name="experience"
+        (change)="getExperience($event)"
+      />
+    </div>
+
+    <div class="row">
+      <label class="col-25" for="profession">Profession</label>
+      <select
+        class="col-75"
+        id="profession"
+        name="profession"
+        (change)="getProfession($event)"
+      >
+        <option value="developer">Developer</option>
+        <option value="teacher">Teacher</option>
+        <option value="cashier">Cashier</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label class="col-25" for="city">City</label>
+      <select class="col-75" id="city" name="city" (change)="getCity($event)">
+        <option value="Tehran">Tehran</option>
+        <option value="Shiraz">Shiraz</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label class="col-25" for="year">Year</label>
+      <select
+        class="col-75"
+        name="year"
+        id="year"
+        formControlName="year"
+        (change)="getYear($event)"
+      >
+        <option value="1400">1400</option>
+        <option selected value="1401">1401</option>
+      </select>
+    </div>
+    <div class="row" style="margin-top: 1rem">
+      <div class="buttonCenter">
+        <input
+          class="btn btn-success btn-default"
+          type="button"
+          value="CALCULATE"
+          (click)="showResult()"
+        />
+      </div>
+    </div>
+  </form>
+  <app-form-result
+    [personAllTax]="allTax"
+    [personBasicSalary]="basicSalary"
+    [personBasicTax]="basicTax"
+    [personBonusSalary]="bonusSalary"
+    [personGrossSalary]="grossSalary"
+    [personHighTax]="highTax"
+    [personNetSalary]="netSalary"
+    [isShown]="isShown"
+  ></app-form-result>
+</div>
